@@ -1,0 +1,73 @@
+﻿@model IEnumerable<WardrobeMVC.Models.Top>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Tops</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail thumbnail-index">
+                <img class="tops-photo" src="@Url.Content(item.TopsPhoto)" />
+                <div class="caption">
+                    <h3>@Html.DisplayFor(modelItem => item.TopsName)</h3>
+                    <p>@Html.ActionLink("Details", "Details", new { id = item.TopsID }, new { @class = "btn btn-primary", role = "button" })</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@*<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TopsName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TopsColor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TopsSeason)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TopsOccassion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TopsPhoto)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TopsName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TopsColor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TopsSeason)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TopsOccassion)
+        </td>
+        <td>
+            <img class="tops-photo" src="@Url.Content(item.TopsPhoto)" />
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TopsID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TopsID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TopsID })
+        </td>
+    </tr>
+}
+
+</table>*@

@@ -1,0 +1,73 @@
+﻿@model IEnumerable<WardrobeMVC.Models.Bottom>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Bottoms</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail thumbnail-index">
+                <img class="tops-photo" src="@Url.Content(item.BottomsPhoto)" />
+                <div class="caption">
+                    <h3>@Html.DisplayFor(modelItem => item.BottomsName)</h3>
+                    <p>@Html.ActionLink("Details", "Details", new { id = item.BottomsID }, new { @class = "btn btn-primary", role = "button" })</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@*<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BottomsName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BottomsColor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BottomsSeason)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BottomsOccassion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BottomsPhoto)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BottomsName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BottomsColor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BottomsSeason)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BottomsOccassion)
+        </td>
+        <td>
+            <img class="tops-photo" src="@Url.Content(item.BottomsPhoto)" />
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.BottomsID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.BottomsID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.BottomsID })
+        </td>
+    </tr>
+}
+
+</table>*@

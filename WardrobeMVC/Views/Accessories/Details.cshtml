@@ -1,0 +1,71 @@
+﻿@model WardrobeMVC.Models.Accessory
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+@*Why doesn't this work?*@
+<img src="@Html.DisplayFor(model => model.AccessoriesPhoto)" />
+
+<h1 class="center-pic">@Html.DisplayFor(model => model.AccessoriesName)</h1>
+
+<p>@Html.DisplayNameFor(model => model.AccessoriesColor) : @Html.DisplayFor(model => model.AccessoriesColor)</p>
+
+<p>@Html.DisplayNameFor(model => model.AccessoriesSeason) : @Html.DisplayFor(model => model.AccessoriesSeason)</p>
+
+<p>@Html.DisplayNameFor(model => model.AccessoriesOccassion) : @Html.DisplayFor(model => model.AccessoriesOccassion)</p>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AccessoriesID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+@*<div>
+    <h4>Accessory</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AccessoriesName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccessoriesName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccessoriesColor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccessoriesColor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccessoriesSeason)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccessoriesSeason)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccessoriesOccassion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccessoriesOccassion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccessoriesPhoto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccessoriesPhoto)
+        </dd>
+
+    </dl>
+</div>*@
+

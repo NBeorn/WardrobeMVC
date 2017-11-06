@@ -11,13 +11,18 @@ namespace WardrobeMVC.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Top
     {
         public int TopsID { get; set; }
+        [Display(Name = "Name")]
         public string TopsName { get; set; }
+        [Display(Name = "Color")]
         public string TopsColor { get; set; }
+        [Display(Name = "Season")]
         public string TopsSeason { get; set; }
+        [Display(Name = "Occassion")]
         public string TopsOccassion { get; set; }
         public string TopsPhoto { get; set; }
     }

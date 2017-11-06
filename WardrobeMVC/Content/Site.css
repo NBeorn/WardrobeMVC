@@ -22,3 +22,37 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/*Home Page*/
+.armoire {
+    width: 400px;
+    height: 450px;
+}
+
+.home-jumbo {
+    background-image: url('jumbo_pic.jpg');
+    color: white;
+}
+
+/*Index Pages*/
+.thumbnail-index h3{
+    text-align: center;
+}
+
+.thumbnail-index p {
+    text-align: center;
+}
+
+.thumbnail-index {
+    padding-top: 50px;
+}
+
+.tops-photo {
+    width: 200px;
+    height: 200px;
+}
+
+/*Details*/
+.center-pic {
+    text-align: center;
+}
